@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=>, initial-scale=1.0">
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css">
     <title>AI Bedtime Stories Generator</title>
 </head>
@@ -12,7 +14,7 @@
         <h1>Welcome to the AI bedtime stories generator</h1>
     </header>
     <main>
-        <form>
+        <form id="story-generator">
             <input type="text" placeholder="Enter the topic of the bedtime story"
             autofocus
             required
@@ -21,9 +23,7 @@
             />
             <input type="submit" class="submit-button"/>
         </form>
-        <div class="story">
-            The story will go here....
-        </div>
+        <div class="story"id="story"></div>
 
     </main>
 
