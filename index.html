@@ -7,6 +7,7 @@
     <title>AI Bedtime Stories Generator</title>
 </head>
 <body>
+    <div class="container">
     <header>
         <h1>Welcome to the AI bedtime stories generator</h1>
     </header>
@@ -16,13 +17,12 @@
             autofocus
             required
             autocomplete="off"
+            class="instructions"
             />
-            <input type="submit" />
+            <input type="submit" class="submit-button"/>
         </form>
-        <div>
-            The story will go header
-        <br/>
-            continue here....
+        <div class="story">
+            The story will go here....
         </div>
 
     </main>
@@ -37,6 +37,7 @@
     href="https://bedtimestoriessite.netlify.app" target="_blank"> on Netlify.
     </a></footer>
 <script src="src/index.js"></script>
+</div>
 </body>
 
 </html>
