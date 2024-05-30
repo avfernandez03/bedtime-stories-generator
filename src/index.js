@@ -1,13 +1,28 @@
+function displayStory(response) {
+    new Typewriter("#story", {
+        strings: response.data.answer,
+        autoStart: true,
+        delay: 1,
+        cursor:"",
+    })  
+}
+
+
+
 
 function generateStory(event) {
     event.preventDefault();
 
-    new Typewriter("#story", {
-        strings: "The story goes here",
-        autoStart: true,
-        delay: 1,
-        cursor:"",
-    })
+//build the API URL
+
+let instructionsInput = document.querySelector("#user-instructions");
+
+let apiKey="tee233ebaaa4783bff41331b36o08895";
+let prompt=`Generate short Spanish bedtime story for kids about ${instructionsInput.value}`;
+let context=`You are a bedstory expert. Please provide short bedtime story in Spanish for small kids and use emoticons to replace a few words in the story.Make sure to follow the user instructions. Use the ${instructionsInput.value} inside a <strong> element`;
+let apiUrl=`https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`
+
+axios.get(apiUrl).then(displayStory);    
 }
 
 
